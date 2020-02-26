@@ -33,7 +33,6 @@ public class StockController {
 	
 	@ResponseStatus(HttpStatus.OK)
 	@RequestMapping(value = "/{date}/{price}", method = RequestMethod.PUT)
-	public boolean updateStocks(@PathVariable("date") String date, @PathVariable("price") float price) throws ParseException {
-		return stockService.updateStockPrice(date, price);
+	public void updateStocks(@PathVariable("date") String date, @PathVariable("price") float price) throws ParseException {
 	}
 }
